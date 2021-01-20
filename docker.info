@@ -6,8 +6,8 @@ Client:
   buildx: Build with BuildKit (Docker Inc., v0.5.1-docker)
 
 Server:
- Containers: 37
-  Running: 25
+ Containers: 36
+  Running: 24
   Paused: 0
   Stopped: 12
  Images: 13
@@ -38,8 +38,8 @@ Server:
  Architecture: x86_64
  CPUs: 6
  Total Memory: 7.576GiB
- Name: acthlkubed24.bluecrest.local
- ID: PVBR:GAYB:KE26:5ZP2:WQSC:HBBG:FRMO:GRSZ:PIRT:HCIG:OTVH:TCFS
+ Name: acthlkubed25.bluecrest.local
+ ID: VK75:L4K4:3ZJU:VPJ3:EVZI:BSWN:TUWO:A5K3:ZN3I:GAI2:2GQJ:NVON
  Docker Root Dir: /var/lib/docker
  Debug Mode: false
  Registry: https://index.docker.io/v1/

@@ -1,6 +1,5 @@
 + '[' -w /host/opt/cni/bin/ ]
 + cp /opt/cni/bin/bridge /opt/cni/bin/cnitool /opt/cni/bin/dhcp /opt/cni/bin/flannel /opt/cni/bin/host-local /opt/cni/bin/ipvlan /opt/cni/bin/loopback /opt/cni/bin/macvlan /opt/cni/bin/noop /opt/cni/bin/portmap /opt/cni/bin/ptp /opt/cni/bin/tuning /opt/cni/bin/vlan /host/opt/cni/bin/
-Wrote CNI binaries to /host/opt/cni/bin/
 + echo 'Wrote CNI binaries to /host/opt/cni/bin/'
 + TMP_CONF=/flannel.conflist.default
 + '[' '{
@@ -23,6 +22,7 @@ Wrote CNI binaries to /host/opt/cni/bin/
   ]
 }
 ' '!='  ]
+Wrote CNI binaries to /host/opt/cni/bin/
 + cat
 + CNI_CONF_NAME=10-flannel.conflist
 + CNI_OLD_NAME=10-flannel.conf
@@ -44,13 +44,6 @@ Wrote CNI binaries to /host/opt/cni/bin/
     {
       "type": "portmap",
       "capabilities": {
-        "portMappings": true
-      }
-    }
-  ]
-}'
-+ :
-+ sleep 3600
 Wrote CNI config: {
   "name": "cbr0",
   "cniVersion":"0.3.1",
@@ -70,3 +63,10 @@ Wrote CNI config: {
     }
   ]
 }
+        "portMappings": true
+      }
+    }
+  ]
+}'
++ :
++ sleep 3600
