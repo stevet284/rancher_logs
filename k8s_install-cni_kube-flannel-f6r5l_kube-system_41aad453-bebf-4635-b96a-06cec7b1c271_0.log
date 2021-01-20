@@ -1,0 +1,72 @@
++ '[' -w /host/opt/cni/bin/ ]
++ cp /opt/cni/bin/bridge /opt/cni/bin/cnitool /opt/cni/bin/dhcp /opt/cni/bin/flannel /opt/cni/bin/host-local /opt/cni/bin/ipvlan /opt/cni/bin/loopback /opt/cni/bin/macvlan /opt/cni/bin/noop /opt/cni/bin/portmap /opt/cni/bin/ptp /opt/cni/bin/tuning /opt/cni/bin/vlan /host/opt/cni/bin/
+Wrote CNI binaries to /host/opt/cni/bin/
++ echo 'Wrote CNI binaries to /host/opt/cni/bin/'
++ TMP_CONF=/flannel.conflist.default
++ '[' '{
+  "name": "cbr0",
+  "cniVersion":"0.3.1",
+  "plugins": [
+    {
+      "type": "flannel",
+      "delegate": {
+        "hairpinMode": true,
+        "isDefaultGateway": true
+      }
+    },
+    {
+      "type": "portmap",
+      "capabilities": {
+        "portMappings": true
+      }
+    }
+  ]
+}
+' '!='  ]
++ cat
++ CNI_CONF_NAME=10-flannel.conflist
++ CNI_OLD_NAME=10-flannel.conf
++ '[' 10-flannel.conflist '!=' 10-flannel.conf ]
++ rm -f /host/etc/cni/net.d/10-flannel.conf
++ mv /flannel.conflist.default /host/etc/cni/net.d/10-flannel.conflist
++ cat /host/etc/cni/net.d/10-flannel.conflist
++ echo 'Wrote CNI config: {
+  "name": "cbr0",
+  "cniVersion":"0.3.1",
+  "plugins": [
+    {
+      "type": "flannel",
+      "delegate": {
+        "hairpinMode": true,
+        "isDefaultGateway": true
+      }
+    },
+    {
+      "type": "portmap",
+      "capabilities": {
+        "portMappings": true
+      }
+    }
+  ]
+}'
++ :
++ sleep 3600
+Wrote CNI config: {
+  "name": "cbr0",
+  "cniVersion":"0.3.1",
+  "plugins": [
+    {
+      "type": "flannel",
+      "delegate": {
+        "hairpinMode": true,
+        "isDefaultGateway": true
+      }
+    },
+    {
+      "type": "portmap",
+      "capabilities": {
+        "portMappings": true
+      }
+    }
+  ]
+}
